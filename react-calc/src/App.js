@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { evaluate } from 'mathjs';
 import './App.css';
 import Button from './components/Button';
 import Input from './components/Input';
@@ -9,6 +10,10 @@ function App() {
 
   const addToInput = (val) => {
     setInput(input + val);
+  };
+
+  const handleEqual = () => {
+    setInput(evaluate(input));
   };
 
   return (
@@ -36,7 +41,7 @@ function App() {
         <div className="row">
           <Button handleClick={addToInput}>.</Button>
           <Button handleClick={addToInput}>0</Button>
-          <Button handleClick={addToInput}>=</Button>
+          <Button handleClick={handleEqual}>=</Button>
           <Button handleClick={addToInput}>-</Button>
         </div>
         <ClearButton handleClear={() => setInput('')}>Clear</ClearButton>
