@@ -7,7 +7,10 @@ const isOperator = (val) => {
 
 const Button = (props) => {
   return (
-    <div className={`btn ${isOperator(props.children) ? null : 'operator'}`}>
+    <div
+      className={`btn ${isOperator(props.children) ? null : 'operator'}`}
+      onClick={() => props.handleClick(props.children)}
+    >
       {props.children}
     </div>
   );
