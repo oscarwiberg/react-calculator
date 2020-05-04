@@ -1,0 +1,15 @@
+.btn {
+  height: 4em;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  background-color: #0000ca;
+  color: whitesmoke;
+  outline: 1px solid #00007c;
+}
+
+.operator {
+  background-color: #f8aa00;
+}
